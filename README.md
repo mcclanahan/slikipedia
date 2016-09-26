@@ -9,6 +9,7 @@ Now you’re thinking, why use two Lambda functions and SNS this could all be do
 
 ##Setup
 _You will need an Amazon AWS and Slack account._
+###AWS###
 - [ ] Create the first Lambda function that will process the Slack Requests
 - [ ] Create an API Gateway API
  - [ ] Create a method of type: POST
@@ -19,13 +20,28 @@ _You will need an Amazon AWS and Slack account._
  - [ ] At the bottom of this Page select "Add mapping Template"
  - [ ] For content type please specify: "application/x-www-form-urlencoded"
  - [ ] Insert the template code below into the text field for the template. This code converts a URL Encoded form post into JSON for your Lambda function to parse
+ - [ ] Deploy your API
 ````
 { "body": $input.json($) }
 ```
- - [ ] Deploy your API
 
+- [ ] Create SNS topic
+ - [ ] Give the topic a name and a display name
+ - [ ] Record ARN 
+- [ ] Create the second Lamda function that will work the SNS message and process the query
+ -[ ] xss
 
-
+###Slack###
+- [ ] Log into Slack then go to https://TEAMNAME.slack.com/apps/build
+- [ ] Select Make a Custom Integration
+- [ ] Select Slash Commands
+- [ ] Add your slash command
+- [ ] CLick Add Slash Command Intergation
+- [ ] Add your AWS API Gateway URL to the URL field
+- [ ] Keep method as POST
+- [ ] Record your token
+- [ ] Use the rest of the settings to customize the command(icon, description, help text..)
+- [ ] Click Save Integration
 
 
 

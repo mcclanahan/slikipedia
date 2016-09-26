@@ -1,5 +1,5 @@
-# slikipedia
-## a server-less slackbot powered by AWS  
+# slikipedia - a server-less slackbot powered by AWS 
+
 
 
 

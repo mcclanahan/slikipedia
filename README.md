@@ -5,7 +5,7 @@ By harnessing the powers of AWS you can operate a serverless slackbot.  This bot
 * Amazon Lambda (two seperate functions)
 * Amazon SNS
 
-Now you’re thinking, why use two Lambda functions and SNS this could all be done in one function.  This is ture but you will run into issues with timeouts in Slack.  There is a 3 second timeout that can be beat sometimes but not always.  We want a reliable bot that doesn't return timeout errors on occasion.  The first Amazon Lambda function validates there is a term to search for and responds to the user immediately that the query is being processed.  It then publishes a message to Amazon SNS to handoff the user’s search.  This message is forwarded to the worker lambda function for processing as you can see in the Code flows below.
+Now you’re thinking, why use two Lambda functions and SNS this could all be done in one function.  This is true but you will run into issues with timeouts in Slack.  There is a 3 second timeout that can be beat sometimes but not always.  We want a reliable bot that doesn't return timeout errors.  The first Amazon Lambda function validates there is a term to search for and responds to the user immediately that the query is being processed.  It then publishes a message to Amazon SNS to handoff the user’s search.  This message is forwarded to the worker lambda function for processing as detailed in the Code flows below.
 
 ##Setup
 _You will need an Amazon AWS and Slack account._

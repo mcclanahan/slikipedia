@@ -16,8 +16,8 @@ By harnessing the powers of AWS you can operate a serverless slackbot.  This bot
 
 
 
-
-##Successful bot query
+##Code flows
+###Successful bot query
 ![successful](https://github.com/mcclanahan/slikipedia/blob/master/images/successful.png)
 
 1. User uses slack command and a search term in Slack (/wiki iphone) which gets sent to Amazon API Gateway
@@ -31,7 +31,7 @@ By harnessing the powers of AWS you can operate a serverless slackbot.  This bot
 7. Results are formatted and return to the slack user
 
 
-#Bot cannot find Wikipedia match
+###Bot cannot find Wikipedia match
 ![failed](https://github.com/mcclanahan/slikipedia/blob/master/images/failed.png)
 
 1. User uses slack command and a search term in Slack (/wiki g9is2ef ) which gets sent to Amazon API Gateway
@@ -44,7 +44,7 @@ By harnessing the powers of AWS you can operate a serverless slackbot.  This bot
 6. Wikipedia returns a failed lookup
 7. Message is sent back to user that the term cannot be found and offers a link to Google for the search term (Sorry, g9is2ef could not be found. Search Google for 'g9is2ef') 
 
-#Search term too vaugue
+###Search term too vaugue
 ![vauge](https://github.com/mcclanahan/slikipedia/blob/master/images/vauge.png)
 
 1. User uses slack command and a search term in Slack (/wiki tesla) which gets sent to Amazon API Gateway
@@ -57,7 +57,7 @@ By harnessing the powers of AWS you can operate a serverless slackbot.  This bot
 6. Wikipedia returns up to eight suggested search terms based on the original vauge term 
 7. Message is formatted and returned to user with the possible searhc options
 
-#Empty search
+###Empty search
 ![empty](https://github.com/mcclanahan/slikipedia/blob/master/images/empty_search.png)
 
 1. User uses slack command but doesn't add a search term (/wiki ), blank request gets sent to Amazon API Gateway

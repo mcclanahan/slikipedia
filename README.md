@@ -1,12 +1,9 @@
-# slikipedia - a server-less slackbot powered by AWS 
+# slikipedia - a serverless slackbot powered by AWS 
 
-
-
-
-
-
-
-
+By harnessing the powers of AWS you can operate a serverless slackbot.  This bot is built using:
+* Amazon API Gateway
+* Amazon Lambda (two seperate functions)
+* Amazon SNS
 
 
 

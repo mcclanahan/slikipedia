@@ -9,6 +9,20 @@ Now you’re thinking, why use two Lambda functions and SNS this could all be do
 
 ##Setup
 _You will need an Amazon AWS and Slack account._
+- [ ] Create the first Lambda function that will process the Slack Requests
+- [ ] Create an API Gateway API
+- [ ] Create a method of type: POST
+- [ ] Select Integration Type: Lambda
+- [ ] Select the region in which you created your Lambda function
+- [ ] Select the Lambda Function you created
+- [ ] Click "Integration Request"
+- [ ] At the bottom of this Page select "Add mapping Template"
+- [ ] For content type please specify: "application/x-www-form-urlencoded"
+- [ ] Insert the template code below into the text field for the template. This code converts a URL Encoded form post into JSON for your Lambda function to parse
+'''
+{ "body": $input.json($) }
+'''
+*Deploy your API
 
 
 

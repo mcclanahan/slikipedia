@@ -23,17 +23,23 @@ _You will need an Amazon AWS and Slack account._
 ````
 { "body": $input.json($) }
 ```
+- [ ] Create SNS topic
+ - [ ] Give the topic a name and a display name
+ - [ ] Record ARN 
 - [ ] Create the first Lambda function that will process the Slack Requests(lambda-slack-concierge)
  - [ ] Select Create a Lambda function
  - [ ] Choose Skip on select blueprint
  - [ ] Choose API the API gateway as the trigger
  - [ ] Add a name and description, choose python as the runtime
  - [ ] Paste the content of lambda_function.py from the lambda-slack-concierge folder
- - [ ] Create SNS topic
- - [ ] Give the topic a name and a display name
- - [ ] Record ARN 
-- [ ] Create the second Lamda function that will work the SNS message and process the query
- -[ ] xss
+ - [ ] Change the sns_arn and ENCRYPTED_EXPECTED_TOKEN
+- [ ] Create the second Lamda function that will work the SNS message and process the query(lambda-slack-worker)
+ - [ ] Select Create a Lambda function
+ - [ ] Choose Skip on select blueprint
+ - [ ] Choose API the API gateway as the trigger
+ - [ ] Add a name and description, choose python as the runtime
+ - [ ] Change Code entry type to 'Upload a .ZIP File'
+ - [ ] Zip up the contents of the lambda-slack-worker folder and upload
 
 ###Slack###
 - [ ] Log into Slack then go to https://TEAMNAME.slack.com/apps/build

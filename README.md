@@ -10,7 +10,6 @@ Now you’re thinking, why use two Lambda functions and SNS this could all be do
 ##Setup
 _You will need an Amazon AWS and Slack account._
 ###AWS###
-- [ ] Create the first Lambda function that will process the Slack Requests
 - [ ] Create an API Gateway API
  - [ ] Create a method of type: POST
  - [ ] Select Integration Type: Lambda
@@ -24,8 +23,13 @@ _You will need an Amazon AWS and Slack account._
 ````
 { "body": $input.json($) }
 ```
-
-- [ ] Create SNS topic
+- [ ] Create the first Lambda function that will process the Slack Requests(lambda-slack-concierge)
+ - [ ] Select Create a Lambda function
+ - [ ] Choose Skip on select blueprint
+ - [ ] Choose API the API gateway as the trigger
+ - [ ] Add a name and description, choose python as the runtime
+ - [ ] Paste the content of lambda_function.py from the lambda-slack-concierge folder
+ - [ ] Create SNS topic
  - [ ] Give the topic a name and a display name
  - [ ] Record ARN 
 - [ ] Create the second Lamda function that will work the SNS message and process the query
